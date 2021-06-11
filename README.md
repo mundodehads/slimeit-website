@@ -1,5 +1,9 @@
 # Slime It! Website
 
+## Deploy
+
+http://slimeit-website-frontend.s3-website-us-east-1.amazonaws.com/
+
 ## About Slime It!
 
 [Slime It!](https://github.com/mundodehads/slimeit) is a slime based game to play wit twitch chat, each chat user can join with a random slime and ~ do something ~ to evolve and reach top of the food chain.
