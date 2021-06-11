@@ -1,0 +1,15 @@
+getRanking:
+  handler: src/handlers/slimes/getRanking.handler
+  events:
+    - http:
+        path: slimes/ranking
+        method: get
+        cors: true
+
+getSlime:
+  handler: src/handlers/slimes/getSlime.handler
+  events:
+    - http:
+        path: slimes/{username}
+        method: get
+        cors: true

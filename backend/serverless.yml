@@ -1,0 +1,25 @@
+service: backend
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+provider:
+  name: aws
+  versionFunctions: false
+  runtime: nodejs10.x
+  region: us-east-1
+  stage: dev
+  environment: ${file(./src/env.yml):${self:custom.stage}}
+
+custom:
+  stage: ${env:STAGE, opt:stage, self:provider.stage}
+  webpack:
+    includeModules: true
+
+package:
+  individually: true
+  exclude:
+    - tests/**
+
+functions: ${file(./src/serverless-dynamic.js):functions}
